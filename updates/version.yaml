@@ -1,2 +1,4 @@
 1.0.1:
     - First version of October Backend SSO Login
+1.0.2:
+    - added .gitignore file

@@ -3,9 +3,10 @@
     namespace Martin\SSOLogin\Controllers;
 
     use Martin\SSOLogin\Models\Settings as Settings;
+    use Martin\SSOLogin\Models\Log      as Log;
 
     use Backend\Classes\Controller;
-    use Backend, BackendAuth, Flash, Input, Lang, Session, ValidationException;
+    use Backend, BackendAuth, Flash, Input, Lang, Request, Session, ValidationException;
 
     use Backend\Models\AccessLog;
     use Backend\Models\User;
@@ -66,6 +67,15 @@
 
             # CHECK MAIL EXISTS
             if(!isset($token_data['payload']['email'])) {
+
+                # RECORD FAILED LOGIN
+                $log = new Log;
+                $log->provider = 'Google';
+                $log->result   = 'failed';
+                $log->email    = $email;
+                $log->ip       = Request::getClientIp();
+                $log->save();
+
                 Flash::error(trans('martin.ssologin::lang.errors.google.invalid_user'));
                 return Backend::redirect('backend/auth/signin');
             }
@@ -76,12 +86,30 @@
 
             # IF NO USER, GET BACK TO LOGIN SCREEN
             if(!$user) {
+
+                # RECORD FAILED LOGIN
+                $log = new Log;
+                $log->provider = 'Google';
+                $log->result   = 'failed';
+                $log->email    = $email;
+                $log->ip       = Request::getClientIp();
+                $log->save();
+
                 Flash::error(trans('martin.ssologin::lang.errors.google.invalid_user'));
                 return Backend::redirect('backend/auth/signin');
             }
 
             # LOGIN USER ON BACKEND
             BackendAuth::login($user, true);
+
+            # RECORD SUCCESSFUL LOGIN
+            $log = new Log;
+            $log->provider = 'Google';
+            $log->result   = 'successful';
+            $log->user_id  = $user->id;
+            $log->email    = $email;
+            $log->ip       = Request::getClientIp();
+            $log->save();
 
             // Load version updates
             UpdateManager::instance()->update();

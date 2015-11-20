@@ -4,6 +4,7 @@
 
     use Event, View;
     use System\Classes\PluginBase;
+    use System\Classes\SettingsManager;
 
     class Plugin extends PluginBase {
 
@@ -42,6 +43,15 @@
                     'order'       => 1,
                     'permissions' => ['martin.ssologin.access'],
                     'category'    => 'system::lang.system.categories.system'
+                ],
+                'logs' => [
+                    'label'       => 'martin.ssologin::lang.plugin.name',
+                    'description' => 'martin.ssologin::lang.plugin.description_log',
+                    'icon'        => 'icon-key',
+                    'url'         => \Backend::url('martin/ssologin/logs'),
+                    'order'       => 100,
+                    'permissions' => ['martin.ssologin.access'],
+                    'category'    => SettingsManager::CATEGORY_LOGS,
                 ],
             ];
         }

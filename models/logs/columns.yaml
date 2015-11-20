@@ -1,0 +1,30 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    created_at:
+        label     : martin.ssologin::lang.logs.created_at
+        searchable: yes
+
+    provider:
+        label     : martin.ssologin::lang.logs.provider
+        searchable: yes
+
+    result:
+        label     : martin.ssologin::lang.logs.result
+        searchable: yes
+
+    user_id:
+        label   : martin.ssologin::lang.logs.user_id
+        relation: user
+        select  : login
+
+    email:
+        label     : martin.ssologin::lang.logs.email
+        searchable: yes
+
+    ip:
+        label     : martin.ssologin::lang.logs.ip
+        searchable: yes

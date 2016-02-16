@@ -59,14 +59,14 @@
             # PARSE USER DETAILS
             if($client->getAccessToken()) {
                 Session::put('access_token', $client->getAccessToken());
-                $token_data = $client->verifyIdToken()->getAttributes();
+                $token_data = $client->verifyIdToken();
             }
 
             # FORGET ACCESS TOKEN
             Session::forget('access_token');
 
             # CHECK MAIL EXISTS
-            if(!isset($token_data['payload']['email'])) {
+            if(!isset($token_data['email'])) {
 
                 # RECORD FAILED LOGIN
                 $log = new Log;
@@ -81,7 +81,7 @@
             }
 
             # FIND USER BY EMAIL
-            $email = $token_data['payload']['email'];
+            $email = $token_data['email'];
             $user  = User::where('email', $email)->first();
 
             # IF NO USER, GET BACK TO LOGIN SCREEN

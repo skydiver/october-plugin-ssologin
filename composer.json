@@ -1,6 +1,6 @@
 {
     "name": "martin/login",
     "require": {
-        "google/apiclient": "1.1.*"
+        "google/apiclient": "^2.0.0@RC"
     }
 }

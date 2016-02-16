@@ -5,3 +5,5 @@
 1.0.3:
     - track successful and failed login attempts
     - create_table.php
+1.1.0:
+    - using Google APIs Client Library BETA

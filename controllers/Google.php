@@ -31,7 +31,7 @@
             $client = new Google_Client();
             $client->setClientId(Settings::get('google_client_id'));
             $client->setClientSecret(Settings::get('google_client_secret'));
-            $client->setRedirectUri(Settings::get('google_redirect_uri'));
+            $client->setRedirectUri('http://' . Request::getHttpHost() . '/backend/martin/ssologin/google');
             $client->setScopes('email');
 
             # HANDLE LOGOUTS

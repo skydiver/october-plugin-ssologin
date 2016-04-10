@@ -25,7 +25,7 @@
         public function index() {
 
             # CHECK SETTINGS ARE DEFINED
-            $this->checkSettings(['google_client_id', 'google_client_secret', 'google_redirect_uri']);
+            $this->checkSettings(['google_client_id', 'google_client_secret']);
 
             # CREATE GOOGLE CLIENT
             $client = new Google_Client();

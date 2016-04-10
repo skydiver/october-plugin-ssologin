@@ -13,8 +13,7 @@
         'settings' => [
             'google' => [
                 'google_client_id'     => 'Client ID',
-                'google_client_secret' => 'Client secret',
-                'google_redirect_uri'  => 'Authorized redirect URI'
+                'google_client_secret' => 'Client secret'
             ]
         ],
 
@@ -32,7 +31,6 @@
                 'generic'                    => 'October Backend SSO Login - Google Login not configured:',
                 'google_client_id_blank'     => ' missing "Client ID" value',
                 'google_client_secret_blank' => ' missing "Client secret" value',
-                'google_redirect_uri_blank'  => ' missing "Authorized redirect URI" value',
                 'invalid_user'               => 'A user was not found with the given credentials'
             ]
         ],

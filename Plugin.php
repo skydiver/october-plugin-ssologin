@@ -28,7 +28,7 @@
             return [
                 'name'        => 'martin.ssologin::lang.plugin.name',
                 'description' => 'martin.ssologin::lang.plugin.description',
-                'author'      => 'Martin',
+                'author'      => 'Martin M.',
                 'icon'        => 'icon-key'
             ];
         }

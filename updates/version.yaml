@@ -7,3 +7,6 @@
     - create_table.php
 1.1.0:
     - using Google APIs Client Library BETA
+1.2.0:
+    - set the redirect URL dynamically based on hostname (thanks to stadeltobi)
+    - removed "Authorized redirect URI" setting

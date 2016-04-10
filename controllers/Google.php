@@ -6,7 +6,7 @@
     use Martin\SSOLogin\Models\Log      as Log;
 
     use Backend\Classes\Controller;
-    use Backend, BackendAuth, Flash, Input, Lang, Request, Session, ValidationException;
+    use Backend, BackendAuth, Config, Flash, Input, Lang, Request, Session, ValidationException;
 
     use Backend\Models\AccessLog;
     use Backend\Models\User;
@@ -31,7 +31,7 @@
             $client = new Google_Client();
             $client->setClientId(Settings::get('google_client_id'));
             $client->setClientSecret(Settings::get('google_client_secret'));
-            $client->setRedirectUri(Request::getSchemeAndHttpHost() . '/backend/martin/ssologin/google');
+            $client->setRedirectUri(Request::getSchemeAndHttpHost() . '/' . Config::get('cms.backendUri') . '/martin/ssologin/google');
             $client->setScopes('email');
 
             # HANDLE LOGOUTS

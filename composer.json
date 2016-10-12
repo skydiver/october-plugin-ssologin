@@ -1,6 +1,10 @@
 {
-    "name": "martin/login",
+    "name": "martin/ssologin-plugin",
+    "type": "october-plugin",
+    "description": "SSO Login for October CMS",
+    "homepage": "https://octobercms.com/plugin/martin-ssologin",
+    "keywords": ["october", "cms", "google", "sso", "login"],
     "require": {
-        "google/apiclient": "^2.0.0@RC"
+        "google/apiclient": "^2.0.3"
     }
 }

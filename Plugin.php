@@ -40,7 +40,7 @@
                     'description' => 'martin.ssologin::lang.plugin.description',
                     'icon'        => 'icon-key',
                     'class'       => '\Martin\SSOLogin\Models\Settings',
-                    'order'       => 1,
+                    'order'       => 800,
                     'permissions' => ['martin.ssologin.access'],
                     'category'    => 'system::lang.system.categories.system'
                 ],

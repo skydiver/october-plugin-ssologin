@@ -10,3 +10,6 @@
 1.2.0:
     - set the redirect URL dynamically based on hostname (thanks to stadeltobi)
     - removed "Authorized redirect URI" setting
+1.2.1:
+    - moved settings menu to bottom
+    - composer.json enhancements

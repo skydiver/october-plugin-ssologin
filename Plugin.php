@@ -49,7 +49,7 @@
                     'description' => 'martin.ssologin::lang.plugin.description_log',
                     'icon'        => 'icon-key',
                     'url'         => \Backend::url('martin/ssologin/logs'),
-                    'order'       => 100,
+                    'order'       => 800,
                     'permissions' => ['martin.ssologin.access'],
                     'category'    => SettingsManager::CATEGORY_LOGS,
                 ],

@@ -13,3 +13,5 @@
 1.2.1:
     - moved settings menu to bottom
     - composer.json enhancements
+1.2.2:
+    - fixed callback url when using https

@@ -7,16 +7,23 @@
         <ol>
             <li>Go to <a target="_blank" href="https://console.developers.google.com/project">https://console.developers.google.com/project</a>
             <li>Create a new project and call it whatever you want (ex: OctoberOAUTH)</li>
-            <li>Once the project was created, click on <b>APIs &amp; Auth > APIs > API Library</b> and enable <b>Google+ API</b></li>
-            <li>Next, go to <b>APIs &amp; Auth > Credentials > Add credentials</b> and select <b>OAuth 2.0 client ID</b> (configure <b>"consent screen"</b> if necessary)</li>
-            <li>On <b>"Create client ID"</b> screen, select <b>"Web application"</b></li>
-            <li>Fill:
+            <li>Once the project was created, go to:
                 <ul>
-                    <li><b>Authorized JavaScript origins:</b> <span style="color:green"><?= URL::to('') ?></span> (or you can leave this field blank if you want)</li>
-                    <li><b>Authorized redirect URIs:</b> <span style="color:green"><?= URL::to('') . '/' . config('cms.backendUri') ?>/martin/ssologin/google</span></li>
+                    <li><strong>API Manager</strong></li>
+                    <li><strong>Credentials</strong></li>
+                    <li><strong>Create credentials</strong></li>
+                    <li><strong>OAuth client ID</strong></li>
                 </ul>
             </li>
-            <li>Click <b>Create</b>; a popup will appear with the <b>"client ID"</b> and <b>"client secret"</b>, please, copy and paste in the field below (now you can close Google Developer Console window)</b>
+            <li>Configure <strong>"consent screen"</strong>(<em>if necessary</em>)</li>
+            <li>On <strong>"Create client ID"</strong> screen, select <strong>"Web application"</strong></li>
+            <li>Fill:
+                <ul>
+                    <li><strong>Authorized JavaScript origins:</strong> <span style="color:green"><?= URL::to('') ?></span> (you can leave this field blank if you want)</li>
+                    <li><strong>Authorized redirect URIs:</strong> <span style="color:green"><?= URL::to('') . '/' . config('cms.backendUri') ?>/martin/ssologin/google</span></li>
+                </ul>
+            </li>
+            <li>Click <strong>Create</strong>; a popup will appear with the <strong>"Here is your client ID"</strong> and <strong>"Here is your client secret"</strong>, please, copy and paste in the fields below<br />(now you can close Google Developer Console window)</strong>
             <li>Save this form, and you're ready to login with your Google account.</li>
         </ol>
     </div>

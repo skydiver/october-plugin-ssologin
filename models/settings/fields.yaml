@@ -1,17 +1,35 @@
-# ===================================
-#  Form Field Definitions
-# ===================================
-
 fields:
+
     google_help:
         type   : partial
         path   : $/martin/ssologin/models/settings/_google_help.htm
         stretch: true
+        span   : right
+
     google_client_id:
         label   : martin.ssologin::lang.settings.google.google_client_id
         span    : left
         required: true
+
     google_client_secret:
         label   : martin.ssologin::lang.settings.google.google_client_secret
         span    : left
         required: true
+
+    google_button:
+        label  : martin.ssologin::lang.settings.google.google_button
+        type   : dropdown
+        options:
+            dark : martin.ssologin::lang.settings.google.google_button_opts.dark
+            light: martin.ssologin::lang.settings.google.google_button_opts.light
+        default: dark
+        span   : left
+
+    section_interface:
+        label  : martin.ssologin::lang.settings.generic.section_interface
+        type   : section
+
+    hide_login_fields:
+        label  : martin.ssologin::lang.settings.generic.hide_login_fields
+        type   : switch
+        comment: martin.ssologin::lang.settings.generic.hide_login_fields_comm

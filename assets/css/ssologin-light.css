@@ -1,0 +1,3 @@
+#ssologin-container { margin-top:20px; padding-top:20px; border-top:solid 1px #1D2D3D; text-align:center; }
+#ssologin-button-google { display:block; width:191px; height:46px; margin:auto; background:url('../imgs/btn_google_signin_light_normal_web.png'); border:none; }
+#ssologin-button-google:hover { background-image:url('../imgs/btn_google_signin_light_pressed_web.png'); }

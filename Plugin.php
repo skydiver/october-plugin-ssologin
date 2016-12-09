@@ -5,6 +5,8 @@
     use Event, View;
     use System\Classes\PluginBase;
     use System\Classes\SettingsManager;
+    use System\Classes\CombineAssets;
+    use Martin\SSOLogin\Models\Settings;
 
     class Plugin extends PluginBase {
 
@@ -14,7 +16,19 @@
 
             \Backend\Controllers\Auth::extend(function($controller) {
                 if(\Backend\Classes\BackendController::$action == 'signin') {
-                    $controller->addCss('/plugins/martin/ssologin/assets/css/ssologin.css');
+
+                    if(Settings::get('google_button') == 'light') {
+                        $CSS[] = 'ssologin-light.css';
+                    } else {
+                        $CSS[] = 'ssologin.css';
+                    }
+
+                    if(Settings::get('hide_login_fields') == 1) {
+                        $CSS[] = 'hide-login.css';
+                    }
+
+                    $controller->addCss(CombineAssets::combine($CSS, plugins_path() . '/martin/ssologin/assets/css/'));
+
                 }
             });
 

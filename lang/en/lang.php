@@ -13,7 +13,14 @@
         'settings' => [
             'google' => [
                 'google_client_id'     => 'Client ID',
-                'google_client_secret' => 'Client secret'
+                'google_client_secret' => 'Client secret',
+                'google_button'        => 'Google Sign-in Button',
+                'google_button_opts'   => ['dark' => 'Dark', 'light' => 'Light'],
+            ],
+            'generic' => [
+                'section_interface'      => 'Interface',
+                'hide_login_fields'      => 'Hide Login & Password fields',
+                'hide_login_fields_comm' => 'The fields will be hidden, not disabled',
             ]
         ],
 

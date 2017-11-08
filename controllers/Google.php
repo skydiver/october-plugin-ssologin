@@ -58,8 +58,8 @@
 
             # PARSE USER DETAILS
             if($client->getAccessToken()) {
-                Session::put('access_token', $client->getAccessToken());
                 $token_data = $client->verifyIdToken();
+                Session::put('access_token', $client->getAccessToken());
             }
 
             # FORGET ACCESS TOKEN

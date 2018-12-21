@@ -20,7 +20,7 @@
             <li>Fill:
                 <ul>
                     <li><strong>Authorized JavaScript origins:</strong> <span style="color:green"><?= URL::to('') ?></span> (you can leave this field blank if you want)</li>
-                    <li><strong>Authorized redirect URIs:</strong> <span style="color:green"><?= URL::to('') . '/' . config('cms.backendUri') ?>/martin/ssologin/google</span></li>
+                    <li><strong>Authorized redirect URIs:</strong> <span style="color:green"><?= \Backend::url('martin/ssologin/google') ?></span></li>
                 </ul>
             </li>
             <li>Click <strong>Create</strong>; a popup will appear with the <strong>"Here is your client ID"</strong> and <strong>"Here is your client secret"</strong>, please, copy and paste in the fields below<br />(now you can close Google Developer Console window)</strong>

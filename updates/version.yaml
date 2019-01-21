@@ -1,25 +1,12 @@
-1.0.1:
-    - First version of October Backend SSO Login
-1.0.2:
-    - added .gitignore file
+1.0.1: 'First version of October Backend SSO Login'
+1.0.2: 'added .gitignore file'
 1.0.3:
-    - track successful and failed login attempts
+    - 'track successful and failed login attempts'
     - create_table.php
-1.1.0:
-    - using Google APIs Client Library BETA
-1.2.0:
-    - set the redirect URL dynamically based on hostname (thanks to stadeltobi)
-    - removed "Authorized redirect URI" setting
-1.2.1:
-    - moved settings menu to bottom
-    - composer.json enhancements
-1.2.2:
-    - fixed callback url when using https
-1.3.0:
-    - updated help for the new Developers Console
-    - new option to select Google Sign-in button
-    - new option to hide login fields
-1.3.1:
-    - Improve stability by not storing invalid tokens (thanks to LukeTowers)
-1.3.2:
-    - properly generate the backend URL (thanks to LukeTowers)
+1.1.0: 'using Google APIs Client Library BETA'
+1.2.0: 'set the redirect URL dynamically based on hostname (thanks to stadeltobi), removed "Authorized redirect URI" setting'
+1.2.1: 'moved settings menu to bottom, composer.json enhancements'
+1.2.2: 'fixed callback url when using https'
+1.3.0: 'updated help for the new Developers Console, new option to select Google Sign-in button, new option to hide login fields'
+1.3.1: 'Improve stability by not storing invalid tokens (thanks to LukeTowers)'
+1.3.2: 'properly generate the backend URL (thanks to LukeTowers)'

@@ -8,11 +8,13 @@ fields:
 
     google_client_id:
         label   : martin.ssologin::lang.settings.google.google_client_id
+        type    : sensitive
         span    : left
         required: true
 
     google_client_secret:
         label   : martin.ssologin::lang.settings.google.google_client_secret
+        type    : sensitive
         span    : left
         required: true
 
